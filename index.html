@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<title>MyNewApplication</title>
+
+<script src="javascript/prototype.js" type="text/javascript"></script>
+<script src="javascript/scriptaculous.js" type="text/javascript"></script>
+
+<style type="text/css">
+body {
+background: url('img/pagebg.jpg') repeat-x;
+background-color: #FFFFFF;
+font-family: arial, verdana, sans-serif;
+font-size: 12px;
+}
+a {
+color: #cde2ff;
+font-weight: bold;
+font-size: 11px;
+}
+.window {
+background: rgb(255,255,255);
+
+//WindowColor
+position: absolute;
+padding: 1px;
+border: 1px solid #424242;
+}
+.window p {
+margin: 3px;
+}
+.windowinner {
+padding: 7px;
+}
+.windowinner input {
+margin-top: 20px;
+}
+.window h1
+{
+padding: 6px;
+display: block;
+background-color: #A6A6A6;
+font-size: 13px;
+margin: 0px;
+color: #424242;
+}
+</style>
+
+<script type="text/javascript">
+
+var iscVOne = 1;
+var iscVScoretext = "";
+var iscVScore = 0;
+var iscVTmerspeedi = 500;
+var iscVHigh = 2;
+var iscVLow = 0;
+var iscVRandom = 0;
+var iscTimer1Handler=setInterval(function(){iscTimer1()},iscVTmerspeedi);
+
+//EndOfGlobalVariables
+
+function init()
+{
+
+
+iscWindow9();
+//iscApp1Launched
+}
+
+Event.observe(window, 'load', init, false);
+
+function iscTimer1()
+{
+iscRandom14();
+//iscTimer1Go
+}
+
+
+function iscSetLabel2()
+{
+if (document.innerText)
+{
+document.getElementById("iscWindow9Score0").innerText=iscVScoretext;
+}
+else
+{
+document.getElementById("iscWindow9Score0").textContent=iscVScoretext;
+}
+iscRandom14();
+//iscSetLabel2Done
+}
+
+
+function iscConvertNumberToText3()
+{
+iscVScoretext = iscVScore + '';
+iscSetLabel2();
+//iscConvertNumberToText3Done
+}
+
+
+function iscAdd4()
+{
+iscVScore = iscVScore + iscVOne;
+iscConvertNumberToText3();
+//iscAdd4Done
+}
+
+
+function iscIfThen5()
+{
+if (iscVRandom == iscVLow)
+{
+//iscIfThen5True
+
+}
+else
+{
+iscAdd4();
+//iscIfThen5False
+}
+}
+
+
+function iscIfThen6()
+{
+if (iscVRandom == iscVLow)
+{
+iscAdd4();
+//iscIfThen6True
+
+}
+else
+{
+//iscIfThen6False
+}
+}
+
+
+function iscIfThen7()
+{
+if (iscVRandom == iscVLow)
+{
+iscSetCanvasPicture10();
+//iscIfThen7True
+
+}
+else
+{
+iscSetCanvasPicture11();
+//iscIfThen7False
+}
+}
+
+
+function iscAppQuit8()
+{
+//iscAppQuit8Done
+}
+
+
+function iscWindow9Can1Clicked()
+{
+iscIfThen6();
+//iscWindow9Can1Clicked
+}
+
+
+function iscWindow9Can2Clicked()
+{
+iscIfThen5();
+//iscWindow9Can2Clicked
+}
+
+
+function iscWindow9()
+{
+new Draggable('iscWindow9Window1');
+document.getElementById("iscWindow9Window1").style.visibility = "visible";
+//iscWindow9Done
+//iscWindow9Opened
+}
+
+function iscWindow9Closed()
+{
+iscAppQuit8();
+//iscWindow9Closed
+}
+
+
+function iscSetCanvasPicture10()
+{
+var canvas = document.getElementById("iscWindow9Can10");
+var context = canvas.getContext("2d");
+var cat = new Image();
+cat.src = "ISCimages/Untitled-1.jpg";
+cat.onload = function() {
+context.drawImage(cat, 0, 0);
+};
+iscSetCanvasPicture13();
+//iscSetCanvasPicture10Done
+}
+
+
+function iscSetCanvasPicture11()
+{
+var canvas = document.getElementById("iscWindow9Can20");
+var context = canvas.getContext("2d");
+var cat = new Image();
+cat.src = "ISCimages/Untitled-1.jpg";
+cat.onload = function() {
+context.drawImage(cat, 0, 0);
+};
+iscSetCanvasPicture12();
+//iscSetCanvasPicture11Done
+}
+
+
+function iscSetCanvasPicture12()
+{
+var canvas = document.getElementById("iscWindow9Can10");
+var context = canvas.getContext("2d");
+var cat = new Image();
+cat.src = "ISCimages/white.jpg";
+cat.onload = function() {
+context.drawImage(cat, 0, 0);
+};
+//iscSetCanvasPicture12Done
+}
+
+
+function iscSetCanvasPicture13()
+{
+var canvas = document.getElementById("iscWindow9Can20");
+var context = canvas.getContext("2d");
+var cat = new Image();
+cat.src = "ISCimages/white.jpg";
+cat.onload = function() {
+context.drawImage(cat, 0, 0);
+};
+//iscSetCanvasPicture13Done
+}
+
+
+function iscRandom14()
+{
+iscVRandom = Math.floor(Math.random() * (iscVLow - iscVHigh)) + iscVHigh;iscIfThen7();
+//iscRandom14Done
+}
+
+
+//EndOfFunctions
+
+</script>
+</head>
+<body>
+<div id="iscWindow9Window1" class="window" style="visibility:hidden;height:328px;width:300px;x:20px;y:20px;">
+<h1>Window</h1>
+<div class="windowinner">
+<div style="position: absolute; left: 186px; top: 51px;">
+<canvas id="iscWindow9Can10" width="80px" height="80px" onClick="iscWindow9Can1Clicked()"/></canvas>
+</div>
+<div style="position: absolute; left: 34px; top: 51px;">
+<canvas id="iscWindow9Can20" width="80px" height="80px" onClick="iscWindow9Can2Clicked()"/></canvas>
+</div>
+<div style="position: absolute; left: 27px; top: 154px; width: 42px; height: 23px;">
+<label id="iscWindow9Score0">0</label>
+</div>
+</div>
+</div>
+
+<!-- EndOfHTML -->
+
+</body>
+</html>
